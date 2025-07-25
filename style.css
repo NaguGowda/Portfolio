@@ -1,0 +1,383 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+}
+
+/* right top icon  mouseover word*/
+
+.header-icon {
+  position: relative;   /* NOT 'right' – this is invalid! */
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip hidden by default */
+.tooltip-text {
+  visibility: hidden;
+  width: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; /* show above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show tooltip when hovering over header-icon */
+.header-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+/* Header and nav */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* icon add in header right top */
+.header-icon {
+  position: right;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* hamberger */
+
+/* Hide default nav on mobile */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Hidden checkbox (acts as toggle) */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #222;
+    display: none;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* When checkbox is checked, show menu */
+  #menu-toggle:checked + .hamburger + nav .nav-links {
+    display: flex;
+  }
+}
+
+
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+
+  /* Position below the icon */
+  top: 120%;  /* instead of bottom: 125% */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.user-icon {
+  width: 50px;            /* or your preferred size */
+  height: 50px;
+  border-radius: 50%;     /* makes it a circle */
+  object-fit: cover;      /* ensures the image fills the circle without distortion */
+  border: 2px solid #333; /* optional border for visibility */
+}
+
+
+.header-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* class="rainbow-text" hover handling */
+
+.rainbow-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400% 100%;
+  background-clip: text;          
+  -webkit-background-clip: text;   
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+}
+
+
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+
+/* logo setting */
+.logo img, .logo video {
+  height: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gif-logo {
+  width: 40px;             /* You can adjust size */
+  height: 90px;
+  border-radius: 70%;      /* Makes the image circular */
+  object-fit: cover;       /* Ensures GIF is centered/cropped neatly */
+  border: 2px solid rgb(19, 245, 215); /* Optional border */
+}
+
+.logo h1 {
+  color: white;                /* Or your preferred color */
+  font-size: 20px;
+  margin: 0;
+}
+
+
+/* Nav Links */
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: hsl(190, 100%, 50%);
+}
+
+/* Search and Hamburger */
+.icons {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  color: white;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* Hero section setup */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video as background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+button {
+  background: #0096c7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Content on top of video */
+.hero-content {
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.hero-content {
+  z-index: 2;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+
+
+
+/* Skills */
+.skills-section {
+  background-color: #ffffff;
+  padding-top: 120px;
+  margin-top: -100px; /* Pulls section upward */
+  position: relative;
+  z-index: 1;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-card {
+  background-color: #00897b;
+  border-radius: 12px;
+  width: 200px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.skill-card h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: rgba(0,0,0,0.9);
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}

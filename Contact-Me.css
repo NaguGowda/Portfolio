@@ -1,0 +1,123 @@
+.contact-section {
+  background: #f7c948;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  background: #111111;
+  color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 40px;
+  z-index: 2;
+}
+
+.contact-form h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-form h2 span {
+  color: #f7c948;
+}
+
+.contact-form p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+}
+
+.contact-form form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-form button {
+  background: #f7c948;
+  color: #111;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffc107;
+}
+
+.contact-image {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 300px;
+  z-index: 2;
+}
+
+.yellow-shape {
+  position: absolute;
+  background: #f7c948;
+  border-radius: 50% 40% 60% 50% / 50%;
+  width: 350px;
+  height: 400px;
+  z-index: 1;
+}
+
+
+/* footer */
+
+.custom-footer {
+  background-color: #111;  /* same dark background */
+  color: #f7c948;          /* matching yellow */
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  border-top: 1px solid #222;
+}
+
+.custom-footer .footer-links {
+  margin-top: 10px;
+}
+
+.custom-footer .footer-links a {
+  color: #f7c948;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.custom-footer .footer-links a:hover {
+  color: #ffc107; /* brighter yellow on hover */
+}

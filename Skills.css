@@ -1,0 +1,104 @@
+.experience-section {
+  padding: 40px 20px;
+  color: #0dd0f3;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.left-side {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a img {
+  width: 35px;
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.right-side {
+  flex: 2;
+  max-width: 600px;
+}
+
+.right-side h4 {
+  letter-spacing: 2px;
+  color: #e0e0e0;
+  font-weight: 400;
+}
+
+.right-side h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 50px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -25px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.timeline-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.timeline-content {
+  background: #08e5ed15;
+  padding: 15px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.timeline-content h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #ddd;
+}

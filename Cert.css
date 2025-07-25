@@ -1,0 +1,52 @@
+.cert-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.certifications-section {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cert-heading {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.cert-box {
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  padding: 25px 20px;
+  width: 280px;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.cert-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
