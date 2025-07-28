@@ -14,12 +14,18 @@
   <link rel="stylesheet" href="Cert.css" />
   <link rel="stylesheet" href="Contact-Me.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+  <link rel="icon" type="image/x-icon" href="css/loading_page.css">
+  
 
   <script src="Skillscript.js"></script>
 </head>
 
 <body>
+
+  <!--Loader -->
+  <div id="loader-wrapper">
+    <div class="loader"></div>
+  </div>
   <header>
     <div class="logo">
       <img src="Logo.gif" alt="GIF Logo" class="gif-logo">
@@ -125,12 +131,14 @@
         </div>
       </div>
       <div class="left-side">
-        <div class="hexagon-bg">
-          <img src="images/Mine.png" alt="Profile" class="profile-img" />
-          <div class="hexagon-glow">
+        <div class="circle-layer">
+          <div class="circle-glow"></div>
+          <div class="circle-image">
+            <img src="images/pic.png" alt="Profile" />
           </div>
         </div>
       </div>
+
 
 
     </div>
@@ -492,6 +500,7 @@
     });
   </script>
   <script src="Js/Refresh.js"></script>
+  <script src="Js/loading.js"></script>
 
 
 </body>

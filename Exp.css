@@ -89,86 +89,54 @@ nav {
   background: linear-gradient(90deg, #b400ff, #7000ff);
 }
 
-
-/* image Glow */
-/* Container to center the image */
-.left-side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  background: transparent;
-  /* No background */
-}
-
-/* Hexagon-shaped glow background */
-.hexagon-glow {
-  position: relative;
-  width: 250px;
-  aspect-ratio: 1;
-  clip-path: polygon(50% 0%,
-      93% 25%,
-      93% 75%,
-      50% 100%,
-      7% 75%,
-      7% 25%);
-
-  background: radial-gradient(circle, #00f0ff 30%, transparent 70%);
-  animation: pulseGlow 3s ease-in-out infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-
 /* image */
+/* 1st Div: Transparent dark background */
 .left-side {
   display: flex;
-  align-items: center;
+  margin-top: 10%;
   justify-content: center;
-  height: 100vh;
-  background-color: transparent;
-  /* Optional overall background */
+  align-items: center;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* semi-transparent dark */
 }
 
-.hexagon-bg {
+/* 2nd Layer Container (Circle shape base) */
+/* Wrapper */
+.circle-layer {
   position: relative;
-  width: 250px;
-  height: 288px;
-  background: #00cfff;
-  clip-path: polygon(50% 0%,
-      93% 25%,
-      93% 75%,
-      50% 100%,
-      7% 75%,
-      7% 25%);
-  box-shadow: 0 0 30px #00cfff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
 }
 
-.hexagon-glow {
+/* Glow effect - BEHIND */
+.circle-glow {
   position: absolute;
-  top: -30px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
+  background-color: #00f0ff;
+  filter: blur(25px);
+  opacity: 0.6;
+  z-index: 0;
+  border-radius: 50%;
 }
 
-.profile-img {
-  width: 180%;
-  height: auto;
-  object-fit: cover;
+/* Image layer - ON TOP */
+.circle-image {
+  margin-top: 20px;
+  position: absolute;
+  width: 218px;
+  height: 214px;
+  overflow: hidden;
+  border-radius: 50%;
   z-index: 2;
-  position: relative;
-  transform: translateY(15px);
-  /* Slight upward overlap */
-  color: #111;
-  box-shadow: 0 0 100px rebeccapurple;
-  background: rgb(30, 207, 220);
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
