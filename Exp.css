@@ -11,7 +11,7 @@ nav {
 
 .nav-link li a {
   text-decoration: none;
-  color: white;
+  color: rgb(40, 234, 124);
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -49,7 +49,7 @@ nav {
 /* Experiecne section */
 .experience-section {
   background: url('images/9129518.jpg') no-repeat center center/cover;
-  background-color: #111;
+  background-color: #82e914;
   /* dark background */
   color: #ffffff;
   text-align: center;
