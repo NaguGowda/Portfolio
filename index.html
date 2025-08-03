@@ -18,10 +18,10 @@
   <link rel="stylesheet"  href="css/loading_page.css"/>
 
   <!-- footer css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-d8e8dYB0XgN+YbZuP6bX1z3UCDFeN0jvZeqtRdrYIuS35E5U5D+xzCxGckR9qTxlhq2oXD3i7Ulm+4ek+S7Fag=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <script src="Skillscript.js"></script>
 </head>
@@ -58,10 +58,10 @@
         <ul class="nav-links">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#projects-section">Projects</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <!-- Close Button -->
         <div class="nav__close" id="nav-close">
@@ -335,7 +335,7 @@
 
 
   <!-- Projects Section -->
-  <section class="projects-section-wrapper">
+  <section id="projects-section" class="projects-section-wrapper">
     <h2 class="section-title">Work History on what I DO</h2>
     <section class="projects-section">  
       <div class="project-card">
@@ -419,16 +419,21 @@
 
 
   <!-- Footer -->
+  <!-- <footer>
+    <a href="https://www.linkedin.com/in/your-profile" class="linkedin-icon" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </footer> -->
   <footer class="custom-footer">
     <p>© 2025 Nagu Gowda. All rights reserved.</p>
     <div class="footer-links">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/nagaraja-t-539007219/" class="linkedin-icon" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+      <a href="#" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="mailto:yourmail@example.com" aria-label="Email">
+      <a href="mailto:nagugowdasagar13@gmail.com" class="mail-icon" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
     </div>
@@ -441,6 +446,8 @@
   <script src="script.js"></script>
   <script src="Js/certBoxes_Popup.js"></script>
   
+
+<!-- navigation script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const navMenu = document.getElementById('nav-menu');
@@ -483,7 +490,7 @@
     });
   </script>
 
-  <!-- skils random move images -->
+  <!-- skills random move images -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const wrappers = document.querySelectorAll('.bubble-wrapper');

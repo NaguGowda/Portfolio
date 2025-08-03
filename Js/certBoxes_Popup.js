@@ -15,8 +15,7 @@ certBoxes.forEach(box => {
         const textContent = box.getAttribute('data-text');
 
         popupImg.src = imgSrc;
-          popupText.textContent = textContent;
-
+    
         // Show popup
         popup.classList.remove('hidden');
     });
