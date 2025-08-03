@@ -13,9 +13,15 @@
   <link rel="stylesheet" href="projects-section.css" />
   <link rel="stylesheet" href="Cert.css" />
   <link rel="stylesheet" href="Contact-Me.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet"  href="css/loading_page.css">
-  
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="stylesheet"  href="css/loading_page.css"/>
+
+  <!-- footer css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-d8e8dYB0XgN+YbZuP6bX1z3UCDFeN0jvZeqtRdrYIuS35E5U5D+xzCxGckR9qTxlhq2oXD3i7Ulm+4ek+S7Fag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <script src="Skillscript.js"></script>
 </head>
@@ -93,7 +99,7 @@
     <p class="experience-description">
       I’m a Lead Software Test Engineer with 5.8+ years of experience in testing web and mobile applications.
       I help organizations deliver high-quality, user-focused products through strong manual, automation (Selenium,
-      Python), API (Postman), and performance (JMeter) testing skills.
+      Python, Java), API (Postman), and performance (JMeter) testing skills.
       My experience in Agile teams, CI/CD pipelines, and tools like JIRA, Maven, and TestNG ensures faster, defect-free
       releases.
       I bring deep technical expertise in database testing, frontend validations (HTML/CSS/JavaScript), and scalable
@@ -331,62 +337,65 @@
   <!-- Projects Section -->
   <section class="projects-section-wrapper">
     <h2 class="section-title">Work History on what I DO</h2>
-    <section class="projects-section">
+    <section class="projects-section">  
       <div class="project-card">
         <h3>Portfolio Website</h3>
         <p>Responsive personal portfolio using HTML, CSS, and JavaScript.</p>
-        <a href="https://github.com/yourusername/portfolio" target="_blank">MORE</a>
+        <a href="https://github.com/NaguGowda?tab=repositories" target="_blank" rel="noopener noreferrer">MORE</a>
       </div>
       <div class="project-card">
-        <h3>Task Manager App</h3>
-        <p>Manage tasks and todos using MERN stack.</p>
-        <a href="https://github.com/yourusername/task-manager" target="_blank">MORE</a>
+        <h3>Android Automation</h3>
+        <p>Automate manual testcases Using Appium, java, TestNG.</p>
+        <a href="https://github.com/NaguGowda?tab=repositories" target="_blank" rel="noopener noreferrer">MORE</a>
       </div>
       <div class="project-card">
-        <h3>Weather App</h3>
-        <p>Get live weather data using OpenWeather API.</p>
-        <a href="https://github.com/yourusername/weather-app" target="_blank">MORE</a>
+        <h3>API Testing</h3>
+        <p>Performed Block-box, Data-driven testing on API. using Postman.</p>
+        <a href="https://github.com/NaguGowda?tab=repositories" target="_blank" rel="noopener noreferrer">MORE</a>
       </div>
       <div class="project-card">
-        <h3>E-commerce Store</h3>
-        <p>React-based store with Stripe integration and admin panel.</p>
-        <a href="https://github.com/yourusername/ecommerce-store" target="_blank">MORE</a>
+        <h3>Machine Learning</h3>
+        <p>EDA using Python, and classification, Naive baise, support vector machine to predict records</p>
+        <a href="https://github.com/NaguGowda?tab=repositories" target="_blank" rel="noopener noreferrer">MORE</a>
       </div>
     </section>
   </section>
 
 
-
   <!-- Certifications Section -->
   <section id="certifications" class="certifications-section">
-    <h2 class="cert-heading">This Certification is for You If</h2>
-
+    <h2 class="cert-heading"> I Upskilled from This certifications </h2>
+  
     <div class="cert-scroll-wrapper">
       <div class="cert-cards scroll-track">
-        <div class="cert-box">
+        <div class="cert-box" data-img="images/Certi/pyagrade.png" data-text="ScrollDown and Close">
           <div class="cert-number">01</div>
-          <p>You're beginning your career and want to start the right way with ISTQB.</p>
+          <p>Completed MySQL certification course on udemy.</p>
         </div>
-        <div class="cert-box">
+        <div class="cert-box" data-img="images/Certi/python.png" data-text="ScrollDown and Close">
           <div class="cert-number">02</div>
-          <p>You’re testing APIs and want to validate your skills using Postman Fundamentals.</p>
+          <p>Completed Python certification course on udemy.</p>
         </div>
-        <div class="cert-box">
+        <div class="cert-box" data-img="images/Certi/Qspyder.png" data-text="ScrollDown and Close">
           <div class="cert-number">03</div>
-          <p>You want to improve performance testing and grow with JMeter certification.</p>
+          <p>Completed Fulstack- SDET certification course on Qspyder..</p>
         </div>
-        <!-- Repeat cards for smoother continuous scroll -->
-        <div class="cert-box">
+        <div class="cert-box" data-img="images/Certi/ggg.png" data-text="ScrollDown and Close">
           <div class="cert-number">04</div>
-          <p>Advance your QA skills with Coursera’s Software Testing program.</p>
+          <p>Completed Datascience with Python & R certification course on Besanth Technology.</p>
         </div>
       </div>
     </div>
+  
+    <!-- Image Popup -->
+    <div id="image-popup" class="popup hidden">
+      <span class="close-btn">&times;</span>
+      <img src="" alt="Certification Preview" id="popup-img">
+      <p id="popup-text"></p> <!-- Text will be inserted here -->
+    </div>
   </section>
+  
 
-
-
-  <!-- Contact Section -->
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="contact-container">
@@ -413,15 +422,25 @@
   <footer class="custom-footer">
     <p>© 2025 Nagu Gowda. All rights reserved.</p>
     <div class="footer-links">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-      <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-      <a href="mailto:yourmail@example.com">Email</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:yourmail@example.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
   </footer>
 
 
 
+
+<!-- all script Js files -->
   <script src="script.js"></script>
+  <script src="Js/certBoxes_Popup.js"></script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const navMenu = document.getElementById('nav-menu');
